@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  text-align: center;
+}
+
+.wrapper {
+  border: 1px solid #000;
+  width: 400px;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  height: 25px;
+  border: 1px solid #000;
+  color: #c0c0c0;
+}
+
+a {
+  margin-top: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.password_require {
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #79799F;
+}
+
+button {
+  border: 1px solid #A6D7FF;
+  background: #A6D7FF;
+  color: white;
+  height: 30px;
+  border-radius: 5px;
+}
+
