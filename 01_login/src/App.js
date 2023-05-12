@@ -22,7 +22,7 @@ function App() {
   return (
     <div className='wrapper'>
       <div className='form_wrapper'>
-        <h2> Webstargram </h2>
+        <h2> <a href='#'> Webstargram </a> </h2>
 
         <Form />
       </div>

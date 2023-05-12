@@ -9,6 +9,10 @@ h2 {
   text-align: center;
 }
 
+h2 > a {
+  color: #000;
+}
+
 .wrapper {
   border: 1px solid #000;
   width: 400px;
@@ -22,11 +26,11 @@ form {
 }
 
 input {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   border-radius: 5px;
+  padding-left: 5px;
   height: 25px;
   border: 1px solid #000;
-  color: #c0c0c0;
 }
 
 a {
@@ -48,5 +52,6 @@ button {
   color: white;
   height: 30px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
