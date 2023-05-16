@@ -1,16 +1,15 @@
-import './App.css';
-// import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import LoginForm from './styles/style';
+import LoginForm from './pages/LoginForm';
+import FindPassword from "./pages/FindPassword";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className='wrapper'>
-      <div className='form_wrapper'>
-        <h2> <a href='#'> Webstargram </a> </h2>
-
-        <LoginForm />
-      </div>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginForm />}> </Route>
+          <Route path="/findpassword" element={<FindPassword />}> 비밀번호를 잊으셨나요? </Route>
+        </Routes>
+      </BrowserRouter>
   );
 }
 
