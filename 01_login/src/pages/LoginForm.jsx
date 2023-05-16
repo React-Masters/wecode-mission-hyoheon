@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from 'react';
-import {useNavigate, BrowserRouter} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const Form = styled.form `
   display: flex;
@@ -19,11 +19,12 @@ const Input = styled.input`
   
 const Button = styled.button`
   border: 1px solid #A6D7FF;
-  background: #A6D7FF;
-  color: white;
+  background: ${({ active }) => (active ? '#0E8BF0' : '#A6D7FF')};
+  color: white; 
   height: 30px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background, 1s;
 `;
 
 const PasswordRequire = styled.div`
@@ -59,27 +60,52 @@ const H2 = styled.h2`
 `;
 
 function LoginForm () {
+  const [inputs, setInputs] = useState({
+    id: '',
+    password: '',
+  })
+  const { id, password } = inputs;
+
+  const [active, setActive] = useState(false);
+
+  const onChange = (e) => {
+    const { value, name } = e.target;
+
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  }
+
+  const ActiveButton = () => {
+    id.length >= 3 && password.length >= 3 ? setActive(true) : setActive(false);
+  };
+
   const navigate = useNavigate();
 
-  const [username, setUsername] = useState('');
-  const [userpassword, setuserpassword] = useState('');
+  function Home (e) {
+    e.preventDefault();
+
+    if(active) {
+      navigate("/Home");
+    }
+  }
 
   return (
     <Section>
       <FormWrapper>
         <H2> Webstargram </H2>
 
-        <Form action="login_db.php">
-            <Input type="text" value={username} onChange={(event) => setUsername(event.target.value)} placeholder='전화번호, 사용자 이름 또는 이메일' /> 
+        <Form onSubmit={Home}>
+            <Input type="text" name="id" onChange={onChange} placeholder='전화번호, 사용자 이름 또는 이메일' onKeyUp={ActiveButton} /> 
     
-            <Input type="password" value={userpassword} onChange={(event) => setuserpassword(event.target.value)} placeholder='비밀번호' /> 
+            <Input type="password" name="password" onChange={onChange} placeholder='비밀번호' onKeyUp={ActiveButton} /> 
     
-            <Button type="submit"> 로그인 </Button>
+            <Button type="submit" active={active}> 로그인 </Button>
     
             <PasswordRequire> 
               <PasswordLink onClick={() => {navigate("/FindPassword")}}> 비밀번호를 잊으셨나요? </PasswordLink> 
             </PasswordRequire>
-
         </Form>
       </FormWrapper>
     </Section>
