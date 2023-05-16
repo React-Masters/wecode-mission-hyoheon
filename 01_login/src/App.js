@@ -1,23 +1,6 @@
-import { useState } from 'react';
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-
-function Form () {
-  const [username, setUsername] = useState('');
-  const [userpassword, setuserpassword] = useState('');
-
-  return (
-    <form action="login_db.php">
-        <input type="text" value={username} onChange={(event) => setUsername(event.target.value)} placeholder='전화번호, 사용자 이름 또는 이메일' /> 
-
-        <input type="password" value={userpassword} onChange={(event) => setuserpassword(event.target.value)} placeholder='비밀번호' /> 
-
-        <button type="submit"> 로그인 </button>
-
-        <div className='password_require'> <a href='#'> 비밀번호를 잊으셨나요? </a> </div>
-    </form>
-  )
-}
+// import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import LoginForm from './styles/style';
 
 function App() {
   return (
@@ -25,7 +8,7 @@ function App() {
       <div className='form_wrapper'>
         <h2> <a href='#'> Webstargram </a> </h2>
 
-        <Form />
+        <LoginForm />
       </div>
     </div>
   );
