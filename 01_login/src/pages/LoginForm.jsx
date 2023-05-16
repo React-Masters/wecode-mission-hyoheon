@@ -18,7 +18,7 @@ const Input = styled.input`
 `;
   
 const Button = styled.button`
-  border: 1px solid #A6D7FF;
+  border: ${({ active }) => (active ? '1px solid #0E8BF0' : '1px solid #A6D7FF')};
   background: ${({ active }) => (active ? '#0E8BF0' : '#A6D7FF')};
   color: white; 
   height: 30px;
