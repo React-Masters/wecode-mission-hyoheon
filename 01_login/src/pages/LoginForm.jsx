@@ -14,6 +14,7 @@ const Input = styled.input`
   padding-left: 5px;
   height: 25px;
   border: 1px solid #000;
+  font-size: 12px;
 `;
   
 const Button = styled.button`
@@ -36,6 +37,7 @@ const PasswordLink = styled.a`
   margin-top: 50px;
   font-weight: bold;
   cursor: pointer;
+  color: #4C4E9F;
 `;
 
 const Section = styled.section`
