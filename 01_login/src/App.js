@@ -1,6 +1,6 @@
+import Home from './pages/Home';
 import LoginForm from './pages/LoginForm';
 import FindPassword from "./pages/FindPassword";
-import Home from './pages/Home';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
