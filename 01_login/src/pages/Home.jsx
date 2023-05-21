@@ -34,9 +34,8 @@ const Icon = styled.div`
 
 
 const Span = styled.span`
-  &:last-child { 
-    display: inline-block;
-    height: px; 
+  &:last-child img { 
+    transform: translateY(2px);
   }  
   margin-left: 20px;
 `;
