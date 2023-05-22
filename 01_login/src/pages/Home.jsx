@@ -1,6 +1,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faPlaneUp, faSquarePlus, faCompass, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faSquarePlus, faCompass, faHeart } from "@fortawesome/free-regular-svg-icons";
 import styled from "styled-components";
 import avatarIcon from "../img/avatarIcon.png"
 
@@ -19,23 +20,20 @@ const Header = styled.header`
   `;
 
 const H2 = styled.h2`
-  
 `;
 
 const Input = styled.input`
-
 `;
 
 const Icon = styled.div`
-  
   margin-right: 20px;
-
 `;
 
 
 const Span = styled.span`
   &:last-child img { 
-    transform: translateY(2px);
+    transform: translateY(3px);
+    height: 32px;
   }  
   margin-left: 20px;
 `;
@@ -57,7 +55,7 @@ function Home() {
 
           <Icon> 
             <Span> <FontAwesomeIcon icon={faHouse} size="2x" color=""/> </Span>
-            <Span> <FontAwesomeIcon icon={faPlaneUp} size="2x" /> </Span>
+            <Span> <FontAwesomeIcon icon={faPaperPlane} size="2x" /> </Span>
             <Span> <FontAwesomeIcon icon={faSquarePlus} size="2x" /> </Span>
             <Span> <FontAwesomeIcon icon={faCompass} size="2x" /> </Span>
             <Span> <FontAwesomeIcon icon={faHeart} size="2x" /> </Span>
